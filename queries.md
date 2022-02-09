@@ -20,7 +20,7 @@ limit: 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-query:
+query: { $and : [ { founded_year: { $gte: 2000 } } , { founded_year: { $lte: 2005} } ] }
 projection:
 sort:
 skip:
